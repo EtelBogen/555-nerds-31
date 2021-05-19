@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Tatyana Novoseltseva](https://up.htmlacademy.ru/htmlcss/31/user/555).
-* Наставник: `Неизвестно`.
+* Наставник: [Мария Наг](https://htmlacademy.ru/profile/id47061).
 
 ---
 
