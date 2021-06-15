@@ -1,0 +1,288 @@
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #FFFFFF;
+  --basic-grey: #EEEEEE;
+  --grey-extra-dark: #283136;
+  --grey-dark: #444444;
+  --grey-dark-catalog: #4D4D4D;
+  --grey-neutral: #666666;
+  --grey-light: #E1E1E1;
+  --basic-red:#FB565A;
+  --focus-red: #E74246;
+  --active-red: #D7373B;
+  --basic-green: #00CA74;
+  --focus-green: #00BC6C;
+  --active-green: #00AA62;
+  --basic-yellow: #EFC849;
+  --focus-yellow: #EAB534;
+  --active-yellow: #E5A722;
+}
+
+/* Global */
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-extra-dark);
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.button {
+  font: inherit;
+  font-weight: 500;
+  line-height: 18px;
+  vertical-align: middle;
+  text-align: center;
+  color: var(--basic-white);
+  text-transform: uppercase;
+
+  background-color: var(--basic-red);
+  border: none;
+  border-radius: 3px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--focus-red);
+}
+
+.button:active {
+  background-color: var(--active-red);
+}
+
+.button span:active {
+  color: var(--basic-white);
+  opacity: 0.3;
+}
+
+/* Header */
+/* Main navigation */
+
+.main-header {
+  background-color: var(--basic-grey);
+}
+
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.site-navigation a[href]:hover,
+.site-navigation a[href]:focus,
+.user-navigation a[href]:hover,
+.user-navigation a[href]:focus {
+  color: var(--basic-red);
+}
+
+.site-navigation a[href]:active,
+.user-navigation a[href]:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Slider */
+
+.slider-list {
+  list-style: none;
+}
+
+.slider-item h3 {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-black);
+}
+
+.slider-item p {
+  color: var(--grey-extra-dark);
+}
+/* End of Header */
+
+/* Body-Index */
+/* Services */
+
+.services-list {
+  list-style: none;
+}
+
+.services-item h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+/* Как лучше? Так, как ниже, или повесить дополнительные классы на зеленую и желтую кнопки и по ним стилизовать? Я нашла вот такой вариант, все работает. Но я не знаю нюансы, нормально ли использовать этот псевдо-класс? */
+
+.services-item:nth-child(2) .button {
+  background-color: var(--basic-green);
+}
+
+.services-item:nth-child(2) .button:hover,
+.services-item:nth-child(2) .button:focus {
+  background-color: var(--focus-green);
+}
+
+.services-item:nth-child(2) .button:active {
+  background-color: var(--active-green);
+}
+
+.services-item:nth-child(3) .button {
+  background-color: var(--basic-yellow);
+}
+
+.services-item:nth-child(3) .button:hover,
+.services-item:nth-child(3) .button:focus {
+  background-color: var(--focus-yellow);
+}
+
+.services-item:nth-child(3) .button:active {
+  background-color: var(--active-yellow);
+}
+
+/* About-us */
+
+.about-us-title {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--basic-black);
+}
+
+.about-us-list-title {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-us-list {
+  list-style: none;
+}
+
+.about-us-table caption {
+  font-weight: 700;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.about-us-table td {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--basic-black);
+}
+
+.about-us-table sup {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 40px;
+  color: var(--basic-black);
+}
+
+.about-us-table th {
+  font-weight: 400;
+  line-height: 18px;
+}
+
+/* Partners */
+
+.partners-list {
+  list-style: none;
+}
+/* End of Body-Index */
+
+/* Footer */
+/* Contacts */
+
+.contacts-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+.contacts-address,
+.contacts-phone {
+  line-height: 18px;
+  color: var(--grey-neutral)
+}
+
+/* Social */
+
+.social-list {
+  list-style: none;
+}
+
+.social-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--basic-black);
+}
+/* End of Footer */
+
+/* Modal */
+
+.modal {
+  color: var(--basic-black);
+}
+
+.modal h2 {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+}
+
+.modal-item label {
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.modal-item input,
+.modal-item textarea {
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+}
+
+.modal-item input:hover,
+.modal-item textarea:hover {
+  border: 2px solid #B4B9BB;
+  border-radius: 3px;
+}
+
+.modal-item input:focus,
+.modal-item textarea:focus {
+  outline: none;
+  border: 2px solid var(--basic-black);
+  border-radius: 3px;
+}
+
+.modal-item input:invalid {
+  color: var(--focus-red);
+
+  border-color: var(--focus-red);
+}
+/* End of Modal */
+
