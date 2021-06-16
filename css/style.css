@@ -1,23 +1,33 @@
 /* Variables */
 
 :root {
-  --basic-black: #000000;
-  --basic-white: #FFFFFF;
-  --basic-grey: #EEEEEE;
-  --grey-extra-dark: #283136;
-  --grey-dark: #444444;
-  --grey-dark-catalog: #4D4D4D;
-  --grey-neutral: #666666;
-  --grey-light: #E1E1E1;
-  --basic-red:#FB565A;
-  --focus-red: #E74246;
-  --active-red: #D7373B;
-  --basic-green: #00CA74;
-  --focus-green: #00BC6C;
-  --active-green: #00AA62;
-  --basic-yellow: #EFC849;
-  --focus-yellow: #EAB534;
-  --active-yellow: #E5A722;
+  --basic-black: rgba(0, 0, 0, 1);
+  --active-black: rgba(0, 0, 0, 0.3);
+  --basic-white: rgba(255, 255, 255, 1);
+  --active-white: rgba(255, 255, 255, 0.3);
+  --basic-grey: rgba(238, 238, 238, 1);
+  --grey-shadow: rgba(0, 1, 1, 0.1);
+  --grey-extra-dark: rgba(40, 49, 54, 1);
+  --locked-grey: rgba(40, 49, 54, 0.3);
+  --grey-dark: rgba(68, 68, 68, 1);
+  --grey-dark-hover: rgba(68, 68, 68, 0.5);
+  --grey-dark-catalog: rgba(77, 77, 77, 1);
+  --grey-contacts: rgba(102, 102, 102, 1);
+  --grey-social: rgba(225, 225, 225, 1);
+  --focus-grey: rgba(223, 223, 223, 1);
+  --active-grey: rgba(213, 213, 213, 1);
+  --current-grey: rgba(219, 219, 219, 1);
+  --input-grey: rgba(215, 220, 222, 1);
+  --input-hover: rgba(180, 185, 187, 1);
+  --basic-red: rgba(251, 86, 90, 1);
+  --focus-red: rgba(231, 66, 70, 1);
+  --active-red: rgba(215, 55, 59, 1);
+  --basic-green: rgba(0, 202, 116, 1);
+  --focus-green: rgba(0, 188, 108, 1);
+  --active-green: rgba(0, 170, 98, 1);
+  --basic-yellow: rgba(239, 200, 73, 1);
+  --focus-yellow: rgba(234, 181, 52, 1);
+  --active-yellow: rgba(229, 167, 34, 1);
 }
 
 /* Global */
@@ -26,7 +36,7 @@ body {
   min-width: 960px;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", "Helvetica Neue", "Nimbus Sans", "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -43,11 +53,25 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Buttons */
+
 .button {
   font: inherit;
   font-weight: 500;
   line-height: 18px;
-  vertical-align: middle;
   text-align: center;
   color: var(--basic-white);
   text-transform: uppercase;
@@ -63,12 +87,9 @@ img {
 }
 
 .button:active {
+  color: var(--active-white);
   background-color: var(--active-red);
-}
-
-.button span:active {
-  color: var(--basic-white);
-  opacity: 0.3;
+  box-shadow: inset 0px 3px 0px var(--grey-shadow);
 }
 
 /* Header */
@@ -85,6 +106,7 @@ img {
 
 .site-navigation a,
 .user-navigation a {
+  font-weight: 500;
   line-height: 30px;
   color: var(--basic-black);
   text-transform: uppercase;
@@ -99,8 +121,13 @@ img {
 
 .site-navigation a[href]:active,
 .user-navigation a[href]:active {
+  color: var(--active-black);
+}
+
+.site-navigation-current a:not([href]),
+.user-navigation-current a:not([href]) {
   color: var(--basic-black);
-  opacity: 0.3;
+  /* тут будет подчеркивание, но оно явно отдельным элементом — короче слова */
 }
 
 /* Slider */
@@ -119,6 +146,7 @@ img {
 .slider-item p {
   color: var(--grey-extra-dark);
 }
+
 /* End of Header */
 
 /* Body-Index */
@@ -135,6 +163,7 @@ img {
   text-transform: uppercase;
   color: var(--basic-black);
 }
+
 /* Как лучше? Так, как ниже, или повесить дополнительные классы на зеленую и желтую кнопки и по ним стилизовать? Я нашла вот такой вариант, все работает. Но я не знаю нюансы, нормально ли использовать этот псевдо-класс? */
 
 .services-item:nth-child(2) .button {
@@ -211,6 +240,7 @@ img {
 .partners-list {
   list-style: none;
 }
+
 /* End of Body-Index */
 
 /* Footer */
@@ -223,10 +253,11 @@ img {
   color: var(--basic-black);
   text-transform: uppercase;
 }
+
 .contacts-address,
 .contacts-phone {
   line-height: 18px;
-  color: var(--grey-neutral)
+  color: var(--grey-contacts);
 }
 
 /* Social */
@@ -241,6 +272,12 @@ img {
   line-height: 36px;
   color: var(--basic-black);
 }
+
+.social-text {
+  line-height: 22px;
+  color: var(--grey-dark);
+}
+
 /* End of Footer */
 
 /* Modal */
@@ -262,14 +299,68 @@ img {
 
 .modal-item input,
 .modal-item textarea {
-  border: 2px solid #d7dcde;
+  border: 2px solid var(--input-grey);
   border-radius: 3px;
+}
+
+.modal-item input::placeholder,
+.modal-item textarea::placeholder {
+  color: var(--grey-dark-hover);
+}
+
+.modal-item input::-webkit-input-placeholder,
+.modal-item textarea::-webkit-input-placeholder {
+  color: var(--grey-dark-hover);
+}
+
+.modal-item input::-ms-input-placeholder,
+.modal-item textarea::-ms-input-placeholder {
+  color: var(--grey-dark-hover);
+}
+
+.modal-item input::-moz-placeholder,
+.modal-item textarea::-moz-placeholder {
+  color: var(--grey-dark-hover);
+  opacity: 1;
+}
+
+.modal-item input:-moz-placeholder,
+.modal-item textarea:-moz-placeholder {
+  color: var(--grey-dark-hover);
+  opacity: 1;
 }
 
 .modal-item input:hover,
 .modal-item textarea:hover {
-  border: 2px solid #B4B9BB;
+  border: 2px solid var(--input-hover);
   border-radius: 3px;
+}
+
+.modal-item input:hover::placeholder,
+.modal-item textarea:hover::placeholder {
+  color: var(--grey-dark-hover);
+}
+
+.modal-item input:hover::-webkit-input-placeholder,
+.modal-item textarea:hover::-webkit-input-placeholder {
+  color: var(--grey-dark-hover);
+}
+
+.modal-item input:hover::-ms-input-placeholder,
+.modal-item textarea:hover::-ms-input-placeholder {
+  color: var(--grey-dark-hover);
+}
+
+.modal-item input:hover::-moz-placeholder,
+.modal-item textarea:hover::-moz-placeholder {
+  color: var(--grey-dark-hover);
+  opacity: 1;
+}
+
+.modal-item input:hover:-moz-placeholder,
+.modal-item textarea:hover:-moz-placeholder {
+  color: var(--grey-dark-hover);
+  opacity: 1;
 }
 
 .modal-item input:focus,
@@ -279,10 +370,38 @@ img {
   border-radius: 3px;
 }
 
+.modal-item input:focus::placeholder,
+.modal-item textarea:focus::placeholder {
+  color: var(--grey-dark);
+}
+
+.modal-item input:focus::-webkit-input-placeholder,
+.modal-item textarea:focus::-webkit-input-placeholder {
+  color: var(--grey-dark);
+}
+
+.modal-item input:focus::-ms-input-placeholder,
+.modal-item textarea:focus::-ms-input-placeholder {
+  color: var(--grey-dark);
+}
+
+.modal-item input:focus::-moz-placeholder,
+.modal-item textarea:focus::-moz-placeholder {
+  color: var(--grey-dark);
+  opacity: 1;
+}
+
+.modal-item input:focus:-moz-placeholder,
+.modal-item textarea:focus:-moz-placeholder {
+  color: var(--grey-dark);
+  opacity: 1;
+}
+
 .modal-item input:invalid {
   color: var(--focus-red);
 
   border-color: var(--focus-red);
 }
-/* End of Modal */
 
+
+/* End of Modal */
