@@ -33,7 +33,7 @@
 /* Global */
 
 body {
-  min-width: 960px;
+  min-width: 1440px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", "Arial", "Helvetica Neue", "Nimbus Sans", "Ubuntu", sans-serif;
@@ -88,16 +88,17 @@ img {
 
 .button:active {
   color: var(--active-white);
-  background-color: var(--active-red);
   box-shadow: inset 0px 3px 0px var(--grey-shadow);
+  background-color: var(--active-red);
 }
 
 /* Header */
-/* Main navigation */
 
 .main-header {
   background-color: var(--basic-grey);
 }
+
+/* Main navigation */
 
 .site-navigation,
 .user-navigation {
@@ -127,7 +128,7 @@ img {
 .site-navigation-current a:not([href]),
 .user-navigation-current a:not([href]) {
   color: var(--basic-black);
-  /* тут будет подчеркивание, но оно явно отдельным элементом — короче слова */
+  /* тут будет подчеркивание, но оно явно отдельным элементом — оно короче слова */
 }
 
 /* Slider */
@@ -149,7 +150,7 @@ img {
 
 /* End of Header */
 
-/* Body-Index */
+/* Main-Index */
 /* Services */
 
 .services-list {
@@ -164,31 +165,29 @@ img {
   color: var(--basic-black);
 }
 
-/* Как лучше? Так, как ниже, или повесить дополнительные классы на зеленую и желтую кнопки и по ним стилизовать? Я нашла вот такой вариант, все работает. Но я не знаю нюансы, нормально ли использовать этот псевдо-класс? */
-
-.services-item:nth-child(2) .button {
+.button-green {
   background-color: var(--basic-green);
 }
 
-.services-item:nth-child(2) .button:hover,
-.services-item:nth-child(2) .button:focus {
+.button-green:hover,
+.button-green:focus {
   background-color: var(--focus-green);
 }
 
-.services-item:nth-child(2) .button:active {
+.button-green:active {
   background-color: var(--active-green);
 }
 
-.services-item:nth-child(3) .button {
+.button-yellow {
   background-color: var(--basic-yellow);
 }
 
-.services-item:nth-child(3) .button:hover,
-.services-item:nth-child(3) .button:focus {
+.button-yellow:hover,
+.button-yellow:focus {
   background-color: var(--focus-yellow);
 }
 
-.services-item:nth-child(3) .button:active {
+.button-yellow:active {
   background-color: var(--active-yellow);
 }
 
@@ -241,7 +240,7 @@ img {
   list-style: none;
 }
 
-/* End of Body-Index */
+/* End of Main-Index */
 
 /* Footer */
 /* Contacts */
@@ -306,29 +305,10 @@ img {
 .modal-item input::placeholder,
 .modal-item textarea::placeholder {
   color: var(--grey-dark-hover);
-}
-
-.modal-item input::-webkit-input-placeholder,
-.modal-item textarea::-webkit-input-placeholder {
-  color: var(--grey-dark-hover);
-}
-
-.modal-item input::-ms-input-placeholder,
-.modal-item textarea::-ms-input-placeholder {
-  color: var(--grey-dark-hover);
-}
-
-.modal-item input::-moz-placeholder,
-.modal-item textarea::-moz-placeholder {
-  color: var(--grey-dark-hover);
   opacity: 1;
 }
 
-.modal-item input:-moz-placeholder,
-.modal-item textarea:-moz-placeholder {
-  color: var(--grey-dark-hover);
-  opacity: 1;
-}
+/* Hover */
 
 .modal-item input:hover,
 .modal-item textarea:hover {
@@ -339,69 +319,31 @@ img {
 .modal-item input:hover::placeholder,
 .modal-item textarea:hover::placeholder {
   color: var(--grey-dark-hover);
-}
-
-.modal-item input:hover::-webkit-input-placeholder,
-.modal-item textarea:hover::-webkit-input-placeholder {
-  color: var(--grey-dark-hover);
-}
-
-.modal-item input:hover::-ms-input-placeholder,
-.modal-item textarea:hover::-ms-input-placeholder {
-  color: var(--grey-dark-hover);
-}
-
-.modal-item input:hover::-moz-placeholder,
-.modal-item textarea:hover::-moz-placeholder {
-  color: var(--grey-dark-hover);
   opacity: 1;
 }
 
-.modal-item input:hover:-moz-placeholder,
-.modal-item textarea:hover:-moz-placeholder {
-  color: var(--grey-dark-hover);
-  opacity: 1;
-}
+/* Focus */
 
 .modal-item input:focus,
 .modal-item textarea:focus {
   outline: none;
   border: 2px solid var(--basic-black);
   border-radius: 3px;
+  color: var(--grey-dark);
 }
 
 .modal-item input:focus::placeholder,
 .modal-item textarea:focus::placeholder {
-  color: var(--grey-dark);
-}
-
-.modal-item input:focus::-webkit-input-placeholder,
-.modal-item textarea:focus::-webkit-input-placeholder {
-  color: var(--grey-dark);
-}
-
-.modal-item input:focus::-ms-input-placeholder,
-.modal-item textarea:focus::-ms-input-placeholder {
-  color: var(--grey-dark);
-}
-
-.modal-item input:focus::-moz-placeholder,
-.modal-item textarea:focus::-moz-placeholder {
-  color: var(--grey-dark);
+  color: transparent;
   opacity: 1;
 }
 
-.modal-item input:focus:-moz-placeholder,
-.modal-item textarea:focus:-moz-placeholder {
-  color: var(--grey-dark);
-  opacity: 1;
-}
+/* Invalid */
 
 .modal-item input:invalid {
   color: var(--focus-red);
 
   border-color: var(--focus-red);
 }
-
 
 /* End of Modal */
