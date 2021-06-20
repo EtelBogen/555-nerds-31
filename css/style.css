@@ -3,12 +3,14 @@
 :root {
   --basic-black: rgba(0, 0, 0, 1);
   --active-black: rgba(0, 0, 0, 0.3);
+  --hover-black: rgba(0, 0, 0, 0.6);
   --basic-white: rgba(255, 255, 255, 1);
   --active-white: rgba(255, 255, 255, 0.3);
+  --active-white2: rgba(0, 0, 0, 0.0001);
   --basic-grey: rgba(238, 238, 238, 1);
   --grey-shadow: rgba(0, 1, 1, 0.1);
   --grey-extra-dark: rgba(40, 49, 54, 1);
-  --locked-grey: rgba(40, 49, 54, 0.3);
+  --disabled-grey: rgba(40, 49, 54, 0.3);
   --grey-dark: rgba(68, 68, 68, 1);
   --grey-dark-hover: rgba(68, 68, 68, 0.5);
   --grey-dark-catalog: rgba(77, 77, 77, 1);
@@ -241,6 +243,146 @@ img {
 }
 
 /* End of Main-Index */
+
+/* Main-Catalog */
+/* Button-Catalog */
+
+.button-catalog {
+  color: var(--basic-black);
+  background-color: var(--basic-grey);
+}
+
+.button-catalog:hover,
+.button-catalog:focus {
+  color: var(--basic-black);
+  background-color: var(--focus-grey);
+}
+
+.button-catalog:active {
+  color: var(--active-black);
+  background-color: var(--active-grey);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+/* Title-Catalog */
+
+.title-catalog {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-black);
+}
+
+/* Filter */
+
+.filter legend,
+.sorting,
+.templates-item h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.grid-list,
+.features-list {
+  list-style: none;
+  line-height: 20px;
+}
+
+.filter-price label {
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.filter-price input[type="number"]::-webkit-outer-spin-button,
+.filter-price input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.filter-price input[type='number'],
+.filter-price input[type="number"]:hover,
+.filter-price input[type="number"]:focus {
+    -moz-appearance: textfield;
+}
+
+.filter-price input,
+.filter-price input:hover,
+.filter-price input:focus {
+  outline: none;
+  border: none;
+  background-color: var(--basic-grey);
+  border-radius: 3px;
+}
+
+.filter-price input[value] {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: var(--grey-extra-dark);
+}
+
+/* Filter-grid Filter-features */
+
+.grid-list-item label,
+.features-list-item label {
+  line-height: 20px;
+  color: var(--grey-extra-dark);
+}
+
+.grid-list-item label:disabled,
+.features-list-item label:disabled {
+  color: var(--disabled-grey);
+}
+
+/* Templates */
+/* Sorting */
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-list a {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--active-black);
+  text-transform: uppercase;
+}
+
+.sorting-list a[href]:hover,
+.sorting-list a[href]:focus {
+  color: var(--hover-black);
+}
+
+.sorting-list a[href]:active,
+.sorting-list-current a:not([href]) {
+  color: var(--basic-black);
+}
+
+/* Templates-list */
+
+.templates-list {
+  list-style: none;
+}
+
+.templates-item-description {
+  line-height: 18px;
+  color: var(--grey-contacts);
+}
+
+/* Pagination */
+
+.pagination-list {
+  list-style: none;
+}
+
+.button-pagination-current a:not([href]) {
+  border: 3px solid var(--current-grey);
+  background-color: var(--active-white2);
+}
+
+/* End of Main-Catalog */
 
 /* Footer */
 /* Contacts */

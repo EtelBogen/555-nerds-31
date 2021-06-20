@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
   <head>
     <meta charset="utf-8">
     <title>Дизайн-студия «Нёрдс»</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
 
-<body>
+<body class="page-body">
 
-  <header>
-    <nav>
-      <a href="index.html">
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a class="main-header-logo">
         <img src="img/svg/nerds-logo.svg" width="160" height="66" alt="">
       </a>
-      <ul>
+      <ul class="site-navigation">
         <li><a href="index.html">Студия</a></li>
         <li><a href="blank.html">Клиенты</a></li>
         <li><a href="catalog.html">Магазин</a></li>
         <li><a href="blank.html">Контакты</a></li>
       </ul>
-      <a href="blank.html">Корзина</a>
+      <!-- Тут иконка для корзины -->
+      <ul class="user-navigation">
+        <li><a class="cart-icon" href="blank.html">Корзина</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -31,58 +37,58 @@
 
   </main>
 
-  <footer class="main-footer">
+  <footer class="page-footer main-footer">
 
-    <section>
-      <h2>Контакты</h2>
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
       <!-- Здесь будет карта -->
       <img src="img/png/map.png" alt="" width="1440" height="416">
-      <p>NЁRDS DESIGN STUDIO</p>
-      <p>
+      <p class="contacts-title">NЁRDS DESIGN STUDIO</p>
+      <p class="contacts-address">
         наб. Реки Карповки, 5 лит П, Санкт-Петербург
       </p>
       <p>
-        <a href="tel:+78005558628">+7 800 555-86-28</a>
+        <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
       </p>
-      <button type="button">Напишите нам</button>
+      <button class="button" type="button">Напишите нам</button>
     </section>
 
-    <section>
-      <h2>Мы в социальных сетях</h2>
-      <ul>
+    <section class="social">
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <ul class="social-list">
         <li>
-          <a href="blank.html">Вконтакте</a>
+          <a class="social-button" href="blank.html"><span class="visually-hidden">Вконтакте</span></a>
         </li>
         <li>
-          <a href="blank.html">Фейсбук</a>
+          <a class="social-button" href="blank.html"><span class="visually-hidden">Фейсбук</span></a>
         </li>
         <li>
-          <a href="blank.html">Инстаграм</a>
+          <a class="social-button" href="blank.html"><span class="visually-hidden">Инстаграм</span></a>
         </li>
       </ul>
-      <p>Давайте дружить, это выгодно!</p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <p class="social-title">Давайте дружить, это выгодно!</p>
+      <p class="social-text">Скидка 10% для друзей из социальных сетей.</p>
     </section>
   </footer>
 
-  <section>
+  <section class="modal">
     <h2>Напишите нам</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <div>
+    <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="modal-item">
         <label for="name">Ваше имя:</label>
         <input id="name" type="text" name="name" placeholder="Имя Фамилия">
       </div>
-      <div>
+      <div class="modal-item">
         <label for="email">Ваш e-mail:</label>
         <input id="email" type="email" name="email" placeholder="email@example.com">
       </div>
-      <div>
+      <div class="modal-item">
         <label for="message">Текст письма:</label>
         <textarea id="message" name="message" placeholder="В свободной форме"></textarea>
       </div>
-      <button type="submit">Отправить</button>
+      <button class="button" type="submit">Отправить</button>
     </form>
-    <button type="button">Закрыть</button>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 
 </body>
