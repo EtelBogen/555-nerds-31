@@ -39,12 +39,12 @@
   <main class="container-catalog">
 
     <section class="filter">
-      <h2>Фильтр шаблонов</h2>
+      <h2 class="visually-hidden">Фильтр шаблонов</h2>
       <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="filter-price">
+        <fieldset>
           <legend>Стоимость:</legend>
           <!-- Тут элемент с ползунками, который потом будет красиво нарисован -->
-          <div>
+          <div class="filter-price">
             <label>От
               <input type="number" name="min-price" value="0">
             </label>
@@ -53,7 +53,7 @@
             </label>
           </div>
         </fieldset>
-        <fieldset class="filter-grid">
+        <fieldset>
           <legend>Сетка:</legend>
           <ul class="grid-list">
             <li class="grid-list-item">
@@ -73,7 +73,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter-features">
+        <fieldset>
           <legend>Особенности:</legend>
           <ul class="features-list">
             <li class="features-list-item">
@@ -108,11 +108,11 @@
     </section>
 
     <section class="templates">
-      <h2>Каталог шаблонов</h2>
+      <h2 class="visually-hidden">Каталог шаблонов</h2>
       <p class="sorting">Сортировать:</p>
       <ul class="sorting-list">
-        <li>
-          <a href="blank.html">По цене</a>
+        <li class="sorting-list-current">
+          <a>По цене</a>
         </li>
         <li>
           <a href="blank.html">По типу</a>
