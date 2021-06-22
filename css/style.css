@@ -275,6 +275,10 @@ img {
 
 /* Filter */
 
+.filter-form fieldset {
+  border: none;
+}
+
 .filter legend,
 .sorting,
 .templates-item h3 {
@@ -288,7 +292,6 @@ img {
 .grid-list,
 .features-list {
   list-style: none;
-  line-height: 20px;
 }
 
 .filter-price label {

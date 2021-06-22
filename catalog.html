@@ -41,10 +41,10 @@
     <section class="filter">
       <h2 class="visually-hidden">Фильтр шаблонов</h2>
       <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset>
+        <fieldset class="filter-price">
           <legend>Стоимость:</legend>
           <!-- Тут элемент с ползунками, который потом будет красиво нарисован -->
-          <div class="filter-price">
+          <div>
             <label>От
               <input type="number" name="min-price" value="0">
             </label>
@@ -53,7 +53,7 @@
             </label>
           </div>
         </fieldset>
-        <fieldset>
+        <fieldset class="filter-grid">
           <legend>Сетка:</legend>
           <ul class="grid-list">
             <li class="grid-list-item">
@@ -73,7 +73,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="filter-features">
           <legend>Особенности:</legend>
           <ul class="features-list">
             <li class="features-list-item">
