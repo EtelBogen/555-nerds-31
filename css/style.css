@@ -304,7 +304,7 @@ img {
     -webkit-appearance: none;
 }
 
-.filter-price input[type='number'],
+.filter-price input[type="number"],
 .filter-price input[type="number"]:hover,
 .filter-price input[type="number"]:focus {
     -moz-appearance: textfield;
