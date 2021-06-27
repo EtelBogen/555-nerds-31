@@ -16,27 +16,29 @@
 <body class="page-body">
 
   <header class="main-header">
-    <nav class="main-navigation">
-      <a class="main-header-logo">
-        <img src="img/svg/nerds-logo.svg" width="160" height="66" alt="">
-      </a>
-      <ul class="site-navigation">
-        <li><a href="index.html">Студия</a></li>
-        <li><a href="blank.html">Клиенты</a></li>
-        <li class="site-navigation-current"><a href="catalog.html">Магазин</a></li>
-        <li><a href="blank.html">Контакты</a></li>
-      </ul>
-      <!-- Тут иконка для корзины -->
-      <ul class="user-navigation">
-        <li><a class="cart-icon" href="blank.html">Корзина</a></li>
-      </ul>
-    </nav>
+    <div class="center">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
+          <img src="img/svg/nerds-logo.svg" width="160" height="66" alt="">
+        </a>
+        <ul class="site-navigation">
+          <li class="site-navigation-current"><a href="index.html">Студия</a></li>
+          <li><a href="blank.html">Клиенты</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="blank.html">Контакты</a></li>
+        </ul>
+        <!-- Тут иконка для корзины -->
+        <ul class="user-navigation">
+          <li><a class="cart-icon" href="blank.html">Корзина</a></li>
+        </ul>
+      </nav>
 
-    <h1 class="title-catalog">Магазин готовых шаблонов</h1>
+      <h1 class="title-catalog">Магазин готовых шаблонов</h1>
+    </div>
 
   </header>
 
-  <main class="container-catalog">
+  <main class="page-catalog center">
 
     <section class="filter">
       <h2 class="visually-hidden">Фильтр шаблонов</h2>
@@ -131,7 +133,7 @@
         <li class="templates-item">
           <a href="blank.html">
             <img src="img/catalog/img-sedona.jpg" alt="" width="358" height="577">
-            <div>
+            <div class="templates-item-description">
               <h3>Sedona</h3>
               <p class="templates-item-description">Информационный сайт для туристов</p>
               <p class="button">9 900 ₽</p>
@@ -143,7 +145,7 @@
             <img src="img/catalog/img-pink.jpg" alt="" width="358" height="578">
             <div class="templates-item-description">
               <h3>Pink App</h3>
-              <p class="templates-item-description">Продуктовый лендинг<br>приложения для iOS и Android</p>
+              <p class="templates-item-text">Продуктовый лендинг<br>приложения для iOS и Android</p>
               <p class="button">9 900 ₽</p>
             </div>
           </a>
@@ -151,9 +153,9 @@
         <li class="templates-item">
           <a href="blank.html">
             <img src="img/catalog/img-barbershop.jpg" alt="" width="358" height="578">
-            <div>
+            <div class="templates-item-description">
               <h3>Barbershop</h3>
-              <p class="templates-item-description">Сайт салона красоты.<br>Для мужчин, да.</p>
+              <p class="templates-item-text">Сайт салона красоты.<br>Для мужчин, да.</p>
               <p class="button">9 900 ₽</p>
             </div>
           </a>
@@ -161,9 +163,9 @@
         <li class="templates-item">
           <a href="blank.html">
             <img src="img/catalog/img-mishka.jpg" alt="" width="358" height="578">
-            <div>
+            <div class="templates-item-description">
               <h3>Mishka</h3>
-              <p class="templates-item-description">Интернет-магазин вязаных игрушек</p>
+              <p class="templates-item-text">Интернет-магазин вязаных игрушек</p>
               <p class="button">9 900 ₽</p>
             </div>
           </a>
@@ -171,9 +173,9 @@
         <li class="templates-item">
           <a href="blank.html">
             <img src="img/catalog/img-aplus.jpg" alt="" width="358" height="578">
-            <div>
+            <div class="templates-item-description">
               <h3>A Plus</h3>
-              <p class="templates-item-description">Лендинг курсов повышения квалификации</p>
+              <p class="templates-item-text">Лендинг курсов повышения квалификации</p>
               <p class="button">9 900 ₽</p>
             </div>
           </a>
@@ -181,9 +183,9 @@
         <li class="templates-item">
           <a href="blank.html">
             <img src="img/catalog/img-kvast.jpg" alt="" width="358" height="578">
-            <div>
+            <div class="templates-item-description">
               <h3>Кваст</h3>
-              <p class="templates-item-description">Промо-сайт производителя<br>крафтового кваса</p>
+              <p class="templates-item-text">Промо-сайт производителя<br>крафтового кваса</p>
               <p class="button">9 900 ₽</p>
             </div>
           </a>
@@ -217,35 +219,43 @@
       <h2 class="visually-hidden">Контакты</h2>
       <!-- Здесь будет карта -->
       <img src="img/png/map.png" alt="" width="1440" height="416">
-      <p class="contacts-title">NЁRDS DESIGN STUDIO</p>
-      <p class="contacts-address">
-        наб. Реки Карповки, 5 лит П, Санкт-Петербург
-      </p>
-      <p>
-        <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
-      </p>
-      <button class="button" type="button">Напишите нам</button>
+      <div class="center">
+        <div class="contacts-info">
+          <p class="contacts-title">NЁRDS DESIGN STUDIO</p>
+          <p class="contacts-address">
+            наб. Реки Карповки, 5 лит П, Санкт-Петербург
+          </p>
+          <p>
+            <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          </p>
+          <button class="button" type="button">Напишите нам</button>
+        </div>
+      </div>
     </section>
 
-    <section class="social">
+    <section class="social center">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
-      <ul class="social-list">
-        <li>
-          <a class="social-button" href="blank.html"><span class="visually-hidden">Вконтакте</span></a>
-        </li>
-        <li>
-          <a class="social-button" href="blank.html"><span class="visually-hidden">Фейсбук</span></a>
-        </li>
-        <li>
-          <a class="social-button" href="blank.html"><span class="visually-hidden">Инстаграм</span></a>
-        </li>
-      </ul>
-      <p class="social-title">Давайте дружить, это выгодно!</p>
-      <p class="social-text">Скидка 10% для друзей из социальных сетей.</p>
+      <div class="social-network">
+        <ul class="social-list">
+          <li>
+            <a class="social-button" href="blank.html"><span class="visually-hidden">Вконтакте</span></a>
+          </li>
+          <li>
+            <a class="social-button" href="blank.html"><span class="visually-hidden">Фейсбук</span></a>
+          </li>
+          <li>
+            <a class="social-button" href="blank.html"><span class="visually-hidden">Инстаграм</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="social-info">
+        <p class="social-title">Давайте дружить, это выгодно!</p>
+        <p class="social-text">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </section>
   </footer>
 
-  <section class="modal">
+  <section class="modal center">
     <h2>Напишите нам</h2>
     <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="modal-item">
