@@ -176,7 +176,6 @@ img {
 .site-navigation-current a:not([href]),
 .user-navigation-current a:not([href]) {
   color: var(--basic-black);
-  /* тут будет подчеркивание, но оно явно отдельным элементом — оно короче слова */
 }
 
 /* Slider */
