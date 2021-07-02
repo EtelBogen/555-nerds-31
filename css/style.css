@@ -35,7 +35,7 @@
 /* Global */
 
 body {
-  min-width: 1180px;
+  min-width: 1160px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", "Arial", "Helvetica Neue", "Nimbus Sans", "Ubuntu", sans-serif;
@@ -473,7 +473,6 @@ img {
 .page-catalog {
   display: grid;
   grid-template-columns: 260px 1fr;
-  align-content: start;
   padding-top: 55px;
 }
 
