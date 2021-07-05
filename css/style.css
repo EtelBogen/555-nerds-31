@@ -7,6 +7,7 @@
   --basic-white: rgba(255, 255, 255, 1);
   --active-white: rgba(255, 255, 255, 0.3);
   --active-white2: rgba(0, 0, 0, 0.0001);
+  --toggle-shadow: rgba(0, 0, 0, 0.15);
   --basic-grey: rgba(238, 238, 238, 1);
   --grey-shadow: rgba(0, 1, 1, 0.1);
   --grey-extra-dark: rgba(40, 49, 54, 1);
@@ -21,12 +22,15 @@
   --current-grey: rgba(219, 219, 219, 1);
   --input-grey: rgba(215, 220, 222, 1);
   --input-hover: rgba(180, 185, 187, 1);
+  --toggle-grey: rgba(171, 171, 171, 1);
+  --scale-grey: rgba(215, 220, 223, 1);
   --basic-red: rgba(251, 86, 90, 1);
   --focus-red: rgba(231, 66, 70, 1);
   --active-red: rgba(215, 55, 59, 1);
   --basic-green: rgba(0, 202, 116, 1);
   --focus-green: rgba(0, 188, 108, 1);
   --active-green: rgba(0, 170, 98, 1);
+  --bar-green: rgba(0, 202, 116, 1);
   --basic-yellow: rgba(239, 200, 73, 1);
   --focus-yellow: rgba(234, 181, 52, 1);
   --active-yellow: rgba(229, 167, 34, 1);
@@ -513,32 +517,92 @@ img {
   list-style: none;
 }
 
+/* Filter-price */
+
 .filter-price label {
   line-height: 22px;
   text-transform: uppercase;
 }
 
-.filter-price input[type="number"]::-webkit-outer-spin-button,
-.filter-price input[type="number"]::-webkit-inner-spin-button {
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: var(--basic-grey);
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--scale-grey);
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: var(--bar-green);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--toggle-grey);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--toggle-shadow);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls input[type="number"]::-webkit-outer-spin-button,
+.price-controls input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-.filter-price input[type="number"],
-.filter-price input[type="number"]:hover,
-.filter-price input[type="number"]:focus {
+.price-controls input[type="number"],
+.price-controls input[type="number"]:hover,
+.price-controls input[type="number"]:focus {
   -moz-appearance: textfield;
 }
 
-.filter-price input,
-.filter-price input:hover,
-.filter-price input:focus {
+.price-controls input,
+.price-controls input:hover,
+.price-controls input:focus {
   outline: none;
   border: none;
   background-color: var(--basic-grey);
   border-radius: 3px;
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
 }
 
-.filter-price input[value] {
+.price-controls input[value] {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
@@ -546,6 +610,14 @@ img {
 }
 
 /* Filter-grid Filter-features */
+
+.filter-grid legend {
+  margin-top: 54px;
+}
+
+.filter-features legend {
+  margin-top: 43px;
+}
 
 .grid-list li,
 .features-list li {
@@ -564,6 +636,10 @@ img {
   color: var(--disabled-grey);
 }
 
+.filter-features ul {
+  margin-bottom: 43px;
+}
+
 /* Templates */
 /* Sorting */
 
@@ -571,28 +647,43 @@ img {
   margin-left: 141px;
 }
 
-.sorting-list {
+.templates-sorting {
+  display: flex;
+  padding-bottom: 34px;
+}
+
+.type-sorting-list,
+.direction-sorting-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.sorting-list a {
+.type-sorting-list {
+  display: flex;
+  width: 272px;
+  margin-left: auto;
+  justify-content: space-between;
+}
+
+.type-sorting-list a {
   font-size: 14px;
   line-height: 18px;
   color: var(--active-black);
   text-transform: uppercase;
 }
 
-.sorting-list a[href]:hover,
-.sorting-list a[href]:focus {
+.type-sorting-list a[href]:hover,
+.type-sorting-list a[href]:focus {
   color: var(--hover-black);
 }
 
-.sorting-list a[href]:active,
-.sorting-list-current a:not([href]) {
+.type-sorting-list a[href]:active,
+.type-current a:not([href]) {
   color: var(--basic-black);
 }
+
+
 
 /* Templates-list */
 

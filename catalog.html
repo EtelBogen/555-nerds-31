@@ -45,14 +45,22 @@
       <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="filter-price">
           <legend>Стоимость:</legend>
-          <!-- Тут элемент с ползунками, который потом будет красиво нарисован -->
-          <div>
-            <label>От
-              <input type="number" name="min-price" value="0">
-            </label>
-            <label>До
-              <input type="number" name="max-price" value="15000">
-            </label>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="width: 50%; margin-left: 0%"></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="left: 0%"></div>
+              <div class="toggle toggle-max" tabindex="0" style="left: 50%"></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">От
+                <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">До
+                <input type="number" name="max-price" value="15000">
+              </label>
+            </div>
           </div>
         </fieldset>
         <fieldset class="filter-grid">
@@ -110,25 +118,29 @@
     </section>
 
     <section class="templates">
-      <h2 class="visually-hidden">Каталог шаблонов</h2>
-      <p class="sorting">Сортировать:</p>
-      <ul class="sorting-list">
-        <li class="sorting-list-current">
-          <a>По цене</a>
-        </li>
-        <li>
-          <a href="blank.html">По типу</a>
-        </li>
-        <li>
-          <a href="blank.html">По названию</a>
-        </li>
-        <li>
-          <a href="blank.html"><span class="visually-hidden">По убыванию</span></a>
-        </li>
-        <li>
-          <a href="blank.html"><span class="visually-hidden">По возрастанию</span></a>
-        </li>
-      </ul>
+      <div class="templates-sorting">
+        <h2 class="visually-hidden">Каталог шаблонов</h2>
+        <p class="sorting">Сортировать:</p>
+        <ul class="type-sorting-list">
+          <li class="type-current">
+            <a>По цене</a>
+          </li>
+          <li>
+            <a href="blank.html">По типу</a>
+          </li>
+          <li>
+            <a href="blank.html">По названию</a>
+          </li>
+        </ul>
+        <ul class="direction-sorting-list">
+          <li>
+            <a href="blank.html"><span class="visually-hidden">По убыванию</span></a>
+          </li>
+          <li>
+            <a href="blank.html"><span class="visually-hidden">По возрастанию</span></a>
+          </li>
+        </ul>
+    </div>
       <ul class="templates-list">
         <li class="templates-item">
           <a href="blank.html">
