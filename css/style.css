@@ -49,7 +49,7 @@ body {
   min-width: 1160px;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", "Arial", "Helvetica Neue", "Nimbus Sans", "Ubuntu", sans-serif;
+  font-family: "Roboto", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -140,7 +140,7 @@ img {
 .main-navigation {
   display: grid;
   grid-template-columns: 160px 1fr 160px;
-  height: 70px;
+  min-height: 70px;
   margin-top: 48px;
 }
 
@@ -148,12 +148,16 @@ img {
 .user-navigation {
   margin: 0;
   padding: 0;
+  padding-top: 27px;
+  padding-bottom: 13px;
   list-style: none;
 }
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   min-width: 437px;
+  padding-top: 25px;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
@@ -172,8 +176,6 @@ img {
   text-transform: uppercase;
 
   display: block;
-  padding-top: 27px;
-  padding-bottom: 13px;
 }
 
 .site-navigation a {
@@ -227,7 +229,7 @@ img {
 .cart-icon::before {
   content: "";
   position: absolute;
-  bottom: 20px;
+  bottom: 8px;
   left: 0px;
 
   width: 15px;
@@ -246,6 +248,7 @@ img {
 
 .slider {
   position: relative;
+  min-height: 424px;
 }
 
 .slider-list {
@@ -262,9 +265,17 @@ img {
   display: block;
 }
 
+.slider-item {
+  box-sizing: border-box;
+  width: 1157px;
+
+  padding-top: 72px;
+  padding-bottom: 80px;
+}
+
 .slider .slider-item {
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: 100% 87%;
 }
 
 .slider .slider-item:nth-child(1) {
@@ -277,15 +288,6 @@ img {
 
 .slider .slider-item:nth-child(3) {
   background-image: url("../img/png/slide3.png");
-}
-
-.slider-item {
-  box-sizing: border-box;
-  width: 1157px;
-  min-height: 427px;
-
-  padding-top: 74px;
-  padding-bottom: 80px;
 }
 
 .slider-item h3 {
@@ -302,8 +304,8 @@ img {
 .slider-item p {
   color: var(--grey-extra-dark);
   width: 416px;
-  line-height: 25px;
-  margin-bottom: 38px;
+  line-height: 24px;
+  margin-bottom: 39px;
 }
 
 .slider-item a {
@@ -450,7 +452,7 @@ img {
 .about-us-title {
   font-weight: 500;
   font-size: 45px;
-  line-height: 46px;
+  line-height: 45px;
   color: var(--basic-black);
   padding: 0;
   margin-top: 34px;
@@ -1020,8 +1022,7 @@ img {
   box-sizing: border-box;
   width: 100%;
   min-height: 231px;
-  max-height: 578px;
-  padding: 26px 10px 44px;
+  padding: 26px 60px 44px;
   text-align: center;
   background-color: var(--basic-grey);
 }
@@ -1109,29 +1110,23 @@ img {
   position: relative;
 
   height: 416px;
-  overflow: hidden;
-  background-color: var(--map-background);
-
   margin-bottom: 38px;
+  background-color: var(--map-background);
+  background-image: url(../img/png/map.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .contacts iframe {
   position: relative;
-  z-index: 2;
+  z-index: 4;
 
   width: 100%;
   height: 416px;
 
   border: none;
-}
-
-.contacts img {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-
-  margin: 0 auto;
-  height: 416px;
 }
 
 .contacts-info {
@@ -1331,7 +1326,7 @@ img {
 
 .modal-form label {
   font-weight: 700;
-  line-height: 24px;
+  line-height: 18px;
 }
 
 .modal-form input,
