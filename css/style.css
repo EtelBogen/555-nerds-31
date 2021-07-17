@@ -149,7 +149,6 @@ img {
   margin: 0;
   padding: 0;
   padding-top: 27px;
-  padding-bottom: 13px;
   list-style: none;
 }
 
@@ -160,7 +159,7 @@ img {
   padding-top: 25px;
   margin-left: auto;
   margin-right: auto;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -176,6 +175,7 @@ img {
   text-transform: uppercase;
 
   display: block;
+  padding-bottom: 15px;
 }
 
 .site-navigation a {
@@ -190,25 +190,6 @@ img {
 .navigation-current a {
   border-bottom: 2px solid var(--basic-red);
 }
-
-/* Второй вариант подчеркивания в главном меню
-
-.site-navigation li,
-.user-navigation li {
-  position: relative;
-}
-
-.site-navigation .navigation-current::after,
-.user-navigation .navigation-current::after {
-  content: "";
-  position: absolute;
-  right: 0px;
-  left: 0px;
-
-  height: 2px;
-  background-color: var(--basic-red);
-}
-*/
 
 .site-navigation a[href]:hover,
 .site-navigation a[href]:focus,
@@ -229,7 +210,7 @@ img {
 .cart-icon::before {
   content: "";
   position: absolute;
-  bottom: 8px;
+  top: 7px;
   left: 0px;
 
   width: 15px;
@@ -306,6 +287,8 @@ img {
   width: 416px;
   line-height: 24px;
   margin-bottom: 39px;
+  overflow-y: auto;
+  max-height: 100px;
 }
 
 .slider-item a {
@@ -390,6 +373,9 @@ img {
 
 .services-item p {
   margin-bottom: 32px;
+  overflow-y: auto;
+  max-height: 100px;
+  max-width: 300px;
 }
 
 .services-item a {
@@ -434,9 +420,9 @@ img {
   grid-template-columns: 2fr 1fr;
 
   box-sizing: border-box;
-  height: 527px;
+  min-height: 527px;
   border-bottom: 2px solid var(--basic-grey);
-  padding: 39px 0 73px;
+  padding: 40px 0 49px;
 }
 
 .about-us-description {
@@ -462,6 +448,8 @@ img {
 .about-us-text {
   width: 646px;
   margin-bottom: 41px;
+  overflow-y: auto;
+  max-height: 100px;
 }
 
 .about-us-list-title {
@@ -542,7 +530,6 @@ img {
 
 .partners {
   box-sizing: border-box;
-  height: 182px;
   border-bottom: 2px solid var(--basic-grey);
   margin-bottom: 80px;
 }
@@ -551,16 +538,16 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 40px;
+  justify-items: center;
 
   list-style: none;
   margin: 0;
   padding: 0;
-  height: 184px;
-  justify-items: center;
 }
 
 .partners-list-item {
   position: relative;
+  min-height: 180px;
 }
 
 .partners-list-item a {
@@ -590,11 +577,19 @@ img {
   right: -45px;
 }
 
+.logo-borodinski::after {
+  right: -45px;
+}
+
 .logo-pink::after {
   right: -57px;
 }
 
 .logo-mishka::after {
+  right: -65px;
+}
+
+.partners-list-item:nth-child(4n)::after {
   display: none;
 }
 
@@ -652,7 +647,7 @@ img {
   color: var(--basic-black);
   text-align: center;
   margin: 0;
-  padding-top: 73px;
+  padding-top: 70px;
   padding-bottom: 109px;
 }
 
@@ -901,10 +896,17 @@ img {
 
 .type-sorting-list {
   display: flex;
-  min-width: 272px;
+  flex-wrap: wrap;
   margin-left: auto;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+.type-sorting-list li {
+  margin-left: 26px;
+  display: block;
+  height: 30px;
+  margin-top: 3px;
 }
 
 .type-sorting-list a {
@@ -927,8 +929,9 @@ img {
 .direction-sorting-list {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   width: 87px;
+  padding-top: 10px;
 }
 
 .direction-sorting-list li {
@@ -1057,6 +1060,8 @@ img {
   text-align: center;
   margin: 0;
   margin-bottom: 33px;
+  overflow-y: auto;
+  max-height: 100px;
 }
 
 .templates-item-description .button {
@@ -1070,7 +1075,7 @@ img {
 /* Pagination */
 
 .pagination-navigation {
-  margin-top: 51px;
+  margin-top: 48px;
   margin-bottom: 60px;
 }
 
@@ -1121,7 +1126,7 @@ img {
 
 .contacts iframe {
   position: relative;
-  z-index: 4;
+  z-index: 2;
 
   width: 100%;
   height: 416px;
@@ -1132,7 +1137,7 @@ img {
 .contacts-info {
   position: absolute;
   top: 54px;
-  z-index: 2;
+  z-index: 3;
 
   box-sizing: border-box;
   width: 319px;
@@ -1174,12 +1179,14 @@ img {
 
 .social-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
 
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  padding-top: 31px;
   list-style: none;
 }
 
@@ -1190,6 +1197,7 @@ img {
 
   width: 79px;
   height: 79px;
+  margin-bottom: 10px;
 
   background-color: var(--grey-social);
   border-radius: 50%;
@@ -1233,6 +1241,11 @@ img {
 
 .modal-show {
   display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-contacts {
@@ -1394,6 +1407,48 @@ img {
 .modal-form .button {
   padding-left: 84px;
   padding-right: 84px;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 /* End of Modal */
