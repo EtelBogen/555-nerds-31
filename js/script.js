@@ -18,6 +18,7 @@ try {
 writeUs.addEventListener("click", function (evt) {
   evt.preventDefault();
   contactsPopup.classList.add("modal-show");
+
   if (storage) {
     contactsEmail.value = storage;
   } else {
@@ -37,6 +38,8 @@ contactsClose.addEventListener("click", function (evt) {
 modalForm.addEventListener("submit", function (evt) {
   if (!contactsName.value || !contactsEmail.value) {
     evt.preventDefault();
+    contactsPopup.classList.remove("modal-error");
+    contactsPopup.offsetWidth = contactsPopup.offsetWidth;
     contactsPopup.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
